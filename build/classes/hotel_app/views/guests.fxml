@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.GuestsController">
+   <children>
+      <TableView fx:id="tableview" layoutX="32.0" layoutY="53.0" onMouseClicked="#showonClick" prefHeight="318.0" prefWidth="709.0">
+        <columns>
+          <TableColumn fx:id="Imie" prefWidth="130.0" text="Imię" />
+            <TableColumn fx:id="Nazwisko" minWidth="9.0" prefWidth="181.0" text="Nazwisko" />
+            <TableColumn fx:id="Nr_tel" prefWidth="193.0" text="Numer telefonu" />
+            <TableColumn fx:id="Nr_dowodu" prefWidth="204.0" text="Numer dowodu osobistego" />
+        </columns>
+      </TableView>
+      <Button fx:id="delete_btn" layoutX="32.0" layoutY="385.0" mnemonicParsing="false" onAction="#DeleteGuest" prefHeight="25.0" prefWidth="102.0" text="Usuń" />
+      <Button fx:id="edit_btn" layoutX="145.0" layoutY="385.0" mnemonicParsing="false" onAction="#EditGuest" prefHeight="25.0" prefWidth="102.0" text="Edytuj" />
+      <TextField fx:id="nameBox" layoutX="33.0" layoutY="479.0" />
+      <TextField fx:id="lastnameBox" layoutX="219.0" layoutY="479.0" />
+      <TextField fx:id="contactBox" layoutX="406.0" layoutY="479.0" />
+      <TextField fx:id="numberBox" layoutX="593.0" layoutY="479.0" />
+      <Button fx:id="confirm_button" layoutX="647.0" layoutY="543.0" mnemonicParsing="false" onAction="#AddNewGuest" prefHeight="27.0" prefWidth="94.0" text="Dodaj nowy" />
+      <Label layoutX="33.0" layoutY="462.0" text="Imię:" />
+      <Label layoutX="219.0" layoutY="462.0" text="Nazwisko:" />
+      <Label layoutX="406.0" layoutY="462.0" text="Numer kontaktowy:" />
+      <Label layoutX="593.0" layoutY="462.0" text="Numer dowodu osobistego:" />
+      <Separator layoutX="1.0" layoutY="427.0" prefHeight="0.0" prefWidth="772.0" />
+      <Label layoutX="346.0" layoutY="11.0" text="Lista gości">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="440.0" text="Dodaj gościa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirm_button1" layoutX="441.0" layoutY="543.0" mnemonicParsing="false" onAction="#EditGuest_confirm" prefHeight="27.0" prefWidth="114.0" text="Zatwierdź zmiany" />
+      <Button fx:id="close_button" layoutX="33.0" layoutY="533.0" mnemonicParsing="false" onAction="#close_window" prefHeight="35.0" prefWidth="115.0" text="Wstecz" />
+   </children>
+</Pane>

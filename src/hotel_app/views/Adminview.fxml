@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="Admin_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.AdminviewController">
+   <children>
+      <Button fx:id="l_gosci" layoutX="150.0" layoutY="242.0" mnemonicParsing="false" onAction="#action" prefHeight="37.0" prefWidth="132.0" text="Lista Gości" />
+      <Button fx:id="lprac" layoutX="336.0" layoutY="242.0" mnemonicParsing="false" onAction="#action" prefHeight="37.0" prefWidth="132.0" text="Lista pracowników" />
+      <Button fx:id="reservations" layoutX="150.0" layoutY="321.0" mnemonicParsing="false" onAction="#action" prefHeight="37.0" prefWidth="132.0" text="Rezerwacje" />
+      <Button fx:id="zarz_pok" layoutX="516.0" layoutY="242.0" mnemonicParsing="false" onAction="#action" prefHeight="37.0" prefWidth="132.0" text="Zarządzaj pokojami" />
+      <Label layoutX="320.0" layoutY="23.0" text="Panel administratora">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="users" layoutX="336.0" layoutY="321.0" mnemonicParsing="false" onAction="#action" prefHeight="37.0" prefWidth="132.0" text="Użytkownicy systemu" />
+      <Button fx:id="rabaty" layoutX="516.0" layoutY="321.0" mnemonicParsing="false" onAction="#action" prefHeight="37.0" prefWidth="132.0" text="Rabaty" />
+      <Separator layoutX="-1.0" layoutY="69.0" prefHeight="0.0" prefWidth="800.0" />
+      <Button fx:id="close_button" layoutX="680.0" layoutY="23.0" mnemonicParsing="false" onAction="#action" prefHeight="27.0" prefWidth="79.0" text="Wyloguj" />
+   </children>
+</Pane>

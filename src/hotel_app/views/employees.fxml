@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="employee_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.EmployeesController">
+   <children>
+      <TableView fx:id="employee_table" layoutX="5.0" layoutY="45.0" prefHeight="289.0" prefWidth="758.0">
+        <columns>
+          <TableColumn fx:id="imie" prefWidth="116.0" text="Imię" />
+            <TableColumn fx:id="nazwisko" prefWidth="129.0" text="Nazwisko" />
+            <TableColumn fx:id="data_ur" prefWidth="95.0" text="Data ur." />
+            <TableColumn fx:id="adres" prefWidth="135.0" text="Adres" />
+            <TableColumn fx:id="nr_tel" prefWidth="118.0" text="Nr tel" />
+            <TableColumn fx:id="stanowisko" prefWidth="164.0" text="Stanowisko" />
+        </columns>
+      </TableView>
+      <TextField fx:id="imie_prac" layoutX="186.0" layoutY="421.0" onAction="#AddNewEmployee" />
+      <TextField fx:id="naz_prac" layoutX="186.0" layoutY="454.0" onAction="#AddNewEmployee" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="adres_prac" layoutX="567.0" layoutY="424.0" onAction="#AddNewEmployee" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="num_prac" layoutX="567.0" layoutY="459.0" onAction="#AddNewEmployee" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="stanow_prac" layoutX="568.0" layoutY="493.0" onAction="#AddNewEmployee" prefHeight="25.0" prefWidth="195.0" />
+      <Label layoutX="14.0" layoutY="375.0" text="Dodaj/edytuj pracownika:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="420.0" text="Imię:" />
+      <Label layoutX="14.0" layoutY="457.0" text="Nazwisko:" />
+      <Label layoutX="14.0" layoutY="495.0" text="Data urodzenia (yyyy-mm-dd):" />
+      <Label layoutX="438.0" layoutY="424.0" text="Adres:" />
+      <Label layoutX="438.0" layoutY="459.0" text="Numer kontaktowy:" />
+      <Label layoutX="438.0" layoutY="493.0" text="Stanowisko:" />
+      <Button fx:id="employee_add" layoutX="636.0" layoutY="555.0" mnemonicParsing="false" onAction="#AddNewEmployee" prefHeight="25.0" prefWidth="127.0" text="Dodaj" />
+      <Button fx:id="employe_delete" layoutX="478.0" layoutY="350.0" mnemonicParsing="false" onAction="#DeleteEmployee" prefHeight="25.0" prefWidth="127.0" text="Usuń" />
+      <Button fx:id="employe_edit" layoutX="636.0" layoutY="350.0" mnemonicParsing="false" onAction="#editData" prefHeight="25.0" prefWidth="127.0" text="Edytuj" />
+      <TextField fx:id="data_prac" layoutX="186.0" layoutY="491.0" onAction="#AddNewEmployee" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="5.0" layoutY="8.0" text="Lista pracowników:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="close_button" layoutX="15.0" layoutY="550.0" mnemonicParsing="false" onAction="#close_action" prefHeight="35.0" prefWidth="115.0" text="Wstecz" />
+      <Button fx:id="employe_update" layoutX="636.0" layoutY="390.0" mnemonicParsing="false" onAction="#editData" prefHeight="25.0" prefWidth="127.0" text="Zatwierdź" />
+      <Button fx:id="clear_btn" layoutX="248.0" layoutY="378.0" mnemonicParsing="false" onAction="#czysc" text="Wyczyść pola" />
+   </children>
+</Pane>

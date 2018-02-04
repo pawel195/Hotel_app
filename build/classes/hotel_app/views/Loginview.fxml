@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="login_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.LoginviewController">
+   <children>
+      <Button fx:id="loginButton" layoutX="306.0" layoutY="320.0" mnemonicParsing="false" onAction="#logowanie" prefHeight="25.0" prefWidth="142.0" text="Zaloguj się">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="user" layoutX="164.0" layoutY="263.0" onAction="#clearonclick" prefHeight="25.0" prefWidth="190.0" promptText="username" />
+      <PasswordField fx:id="password" layoutX="400.0" layoutY="263.0" onAction="#clearonclick" prefHeight="25.0" prefWidth="190.0" promptText="password" />
+      <Label layoutX="475.0" layoutY="225.0" text="Hasło:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="196.0" layoutY="225.0" text="Nazwa użytkownika:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginresult" layoutX="232.0" layoutY="75.0" prefHeight="36.0" prefWidth="291.0" textFill="#2edd2e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="close" cancelButton="true" layoutX="636.0" layoutY="530.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="30.0" prefWidth="124.0" text="Zamknij program" />
+      <Label layoutX="258.0" layoutY="135.0" prefHeight="49.0" prefWidth="276.0" text="System rezerwacji hotelowej">
+         <font>
+            <Font name="System Italic" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

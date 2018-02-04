@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.Guests_home_editController">
+   <children>
+      <Label layoutX="345.0" layoutY="21.0" text="Lista gości">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableview" layoutX="39.0" layoutY="72.0" onMouseClicked="#showonClick" prefHeight="388.0" prefWidth="717.0">
+        <columns>
+          <TableColumn fx:id="Imie" prefWidth="157.0" text="Imie" />
+          <TableColumn fx:id="Nazwisko" prefWidth="191.0" text="Nazwisko" />
+            <TableColumn fx:id="Nr_tel" prefWidth="166.0" text="Numer telefonu" />
+            <TableColumn fx:id="Nr_dowodu" prefWidth="202.0" text="Numer dowodu osobistego" />
+        </columns>
+      </TableView>
+      <Button fx:id="delete_btn" layoutX="688.0" layoutY="467.0" mnemonicParsing="false" onAction="#DeleteGuest" prefHeight="25.0" prefWidth="69.0" text="Usuń" />
+      <Button fx:id="edit_btn" layoutX="597.0" layoutY="467.0" mnemonicParsing="false" onAction="#EditGuest" prefHeight="25.0" prefWidth="69.0" text="Edytuj" />
+      <Button fx:id="confirm_button1" layoutX="651.0" layoutY="529.0" mnemonicParsing="false" onAction="#EditGuest_confirm" text="Potwierdź zmiany" />
+      <TextField fx:id="nameBox" layoutX="40.0" layoutY="529.0" />
+      <TextField fx:id="lastnameBox" layoutX="194.0" layoutY="529.0" />
+      <TextField fx:id="contactBox" layoutX="349.0" layoutY="529.0" prefHeight="25.0" prefWidth="120.0" />
+      <TextField fx:id="numberBox" layoutX="477.0" layoutY="529.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label layoutX="40.0" layoutY="499.0" text="Imie:" />
+      <Label layoutX="194.0" layoutY="499.0" text="Nazwisko:" />
+      <Label layoutX="349.0" layoutY="499.0" text="Numer telefonu:" />
+      <Label layoutX="477.0" layoutY="499.0" text="Numer dowodu osobistego:" />
+   </children>
+</Pane>

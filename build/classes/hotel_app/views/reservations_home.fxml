@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.Reservations_homeController">
+   <children>
+      <Button fx:id="close_button" layoutX="688.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="97.0" text="Wyloguj się">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TableView fx:id="tabela_gosci" layoutX="23.0" layoutY="89.0" onMouseClicked="#show_guest" prefHeight="158.0" prefWidth="594.0">
+        <columns>
+          <TableColumn fx:id="Imie" prefWidth="123.0" text="Imię" />
+          <TableColumn fx:id="Nazwisko" minWidth="3.0" prefWidth="155.0" text="Nazwisko" />
+            <TableColumn fx:id="Nr_tel" prefWidth="137.0" text="Numer telefonu" />
+            <TableColumn fx:id="Nr_dowodu" prefWidth="178.0" text="Numer dowodu osobistego" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabela_pokoi" layoutX="23.0" layoutY="281.0" onMouseClicked="#show_price" prefHeight="158.0" prefWidth="762.0">
+        <columns>
+          <TableColumn fx:id="typ" prefWidth="130.0" text="Typ pokoju" />
+          <TableColumn fx:id="numer_pokoju" prefWidth="89.0" text="Numer pokoju" />
+            <TableColumn fx:id="pietro" prefWidth="58.0" text="Piętro" />
+            <TableColumn fx:id="ilosc_os" prefWidth="73.0" text="Pojemność" />
+            <TableColumn fx:id="balkon" prefWidth="66.0" text="Balkon" />
+            <TableColumn fx:id="opis" prefWidth="259.0" text="Opis" />
+            <TableColumn fx:id="cena" prefWidth="86.0" text="Cena (zł)" />
+        </columns>
+      </TableView>
+      <Label layoutX="23.0" layoutY="18.0" text="Dziś jest:" />
+      <Label layoutX="356.0" layoutY="16.0" text="Rezerwacja">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirm_button" layoutX="688.0" layoutY="250.0" mnemonicParsing="false" onAction="#AddNewGuest" prefHeight="17.0" prefWidth="97.0" text="Dodaj gościa" />
+      <Label layoutX="23.0" layoutY="63.0" prefHeight="17.0" prefWidth="153.0" text="Lista zapisanych gości:" />
+      <Label layoutX="23.0" layoutY="254.0" text="Wolne pokoje:" />
+      <DatePicker fx:id="od_kiedy" editable="false" layoutX="23.0" layoutY="479.0" prefHeight="25.0" prefWidth="114.0" />
+      <DatePicker fx:id="do_kiedy" editable="false" layoutX="147.0" layoutY="479.0" prefHeight="25.0" prefWidth="114.0" />
+      <TextField fx:id="suma" editable="false" layoutX="650.0" layoutY="506.0" prefHeight="25.0" prefWidth="124.0" text="0" />
+      <Button fx:id="rezerwuj" layoutX="688.0" layoutY="540.0" mnemonicParsing="false" onAction="#zarezerwuj" prefHeight="30.0" prefWidth="97.0" text="Zarezerwuj">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="aktualne_rezerwacje" layoutX="540.0" layoutY="540.0" mnemonicParsing="false" onAction="#show_rezerwacje" prefHeight="30.0" prefWidth="130.0" text="Aktualne rezerwacje" />
+      <Label layoutX="23.0" layoutY="454.0" text="Rozpoczęcie od:" />
+      <Label layoutX="147.0" layoutY="454.0" text="Zakończenie:" />
+      <Label layoutX="600.0" layoutY="505.0" text="Suma:" textFill="#11ab49">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="522.0" text="Rabat:" />
+      <Label layoutX="775.0" layoutY="512.0" prefHeight="20.0" prefWidth="11.0" text="zł">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="rabaty_combo" layoutX="66.0" layoutY="518.0" onAction="#showDiscountmore" prefWidth="150.0" />
+      <TextArea fx:id="rabaty_more" editable="false" layoutX="232.0" layoutY="518.0" prefHeight="52.0" prefWidth="193.0" wrapText="true" />
+      <Button fx:id="rabaty_submit" layoutX="435.0" layoutY="540.0" mnemonicParsing="false" onAction="#przydziel" prefHeight="30.0" prefWidth="88.0" text="Oblicz">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Separator layoutX="-1.0" layoutY="52.0" prefHeight="1.0" prefWidth="793.0" />
+      <Separator layoutX="-3.0" layoutY="445.0" prefHeight="9.0" prefWidth="800.0" />
+      <Label fx:id="data_lbl" layoutX="77.0" layoutY="18.0" prefHeight="17.0" prefWidth="88.0" />
+      <Label layoutX="625.0" layoutY="80.0" text="Imię:" />
+      <Label layoutX="624.0" layoutY="120.0" text="Nazwisko:" />
+      <Label layoutX="625.0" layoutY="159.0" text="Numer telefonu:" />
+      <Label layoutX="625.0" layoutY="201.0" text="Numer dowodu osobistego:" />
+      <TextField fx:id="nameBox" layoutX="625.0" layoutY="97.0" prefHeight="25.0" prefWidth="161.0" />
+      <TextField fx:id="lastnameBox" layoutX="625.0" layoutY="137.0" prefHeight="25.0" prefWidth="161.0" />
+      <TextField fx:id="contactBox" layoutX="625.0" layoutY="176.0" prefHeight="25.0" prefWidth="161.0" />
+      <TextField fx:id="numberBox" layoutX="625.0" layoutY="218.0" prefHeight="25.0" prefWidth="161.0" />
+      <Label layoutX="10.0" layoutY="547.0" text="Wartość:" />
+      <TextField fx:id="wartosc_rabatu" layoutX="65.0" layoutY="543.0" prefHeight="25.0" prefWidth="69.0" text="0" />
+      <Label layoutX="136.0" layoutY="547.0" text="\%" />
+      <TextField fx:id="rezerwacja_imieinazwisko" editable="false" layoutX="444.0" layoutY="479.0" prefHeight="25.0" prefWidth="193.0" />
+      <TextField fx:id="rezerwacja_numerpokoju" editable="false" layoutX="688.0" layoutY="479.0" prefHeight="25.0" prefWidth="86.0" />
+      <Label layoutX="444.0" layoutY="454.0" text="Imię i nazwisko:" />
+      <Label layoutX="688.0" layoutY="454.0" text="Numer pokoju:" />
+      <Separator layoutX="-1.0" layoutY="511.0" prefHeight="3.0" prefWidth="436.0" />
+      <Label layoutX="368.0" layoutY="454.0" text="Liczba dni:" />
+      <TextField fx:id="numofdays" editable="false" layoutX="368.0" layoutY="479.0" prefHeight="25.0" prefWidth="55.0" text="1" />
+      <Button fx:id="edycja_gosci" layoutX="512.0" layoutY="250.0" mnemonicParsing="false" onAction="#edycja_gosci" text="Edycja listy gości" />
+      <Button fx:id="apply_days" layoutX="278.0" layoutY="479.0" mnemonicParsing="false" onAction="#oblicz_dni" prefHeight="25.0" prefWidth="76.0" text="Potwierdź" />
+      <Button fx:id="refresh" layoutX="117.0" layoutY="250.0" mnemonicParsing="false" onAction="#odswiez" text="Odśwież listę pokoi" />
+      <Button fx:id="clear_dis" layoutX="156.0" layoutY="543.0" mnemonicParsing="false" onAction="#wyczysc_rabaty" text="Wyczyść" />
+   </children>
+</Pane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.RoomsController">
+   <children>
+      <TableView fx:id="rooms_table" layoutX="19.0" layoutY="45.0" prefHeight="310.0" prefWidth="769.0">
+        <columns>
+          <TableColumn fx:id="typ" prefWidth="121.0" text="Typ" />
+            <TableColumn fx:id="numer_pokoju" prefWidth="66.0" text="Nr_pokoju" />
+            <TableColumn fx:id="pietro" prefWidth="48.0" text="Piętro" />
+            <TableColumn fx:id="ilosc_os" prefWidth="72.0" text="Pojemnosc" />
+            <TableColumn fx:id="balkon" prefWidth="54.0" text="Balkon" />
+            <TableColumn fx:id="opis" prefWidth="227.0" text="Opis" />
+            <TableColumn fx:id="stan" prefWidth="95.0" text="Stan" />
+            <TableColumn fx:id="cena" prefWidth="85.0" text="Cena" />
+        </columns>
+      </TableView>
+      <TextField fx:id="room_type" layoutX="56.0" layoutY="477.0" onAction="#AddNewRoom" prefHeight="48.0" prefWidth="138.0" />
+      <TextField fx:id="room_num" layoutX="279.0" layoutY="418.0" onAction="#AddNewRoom" prefHeight="25.0" prefWidth="48.0" />
+      <Label layoutX="19.0" layoutY="417.0" text="Dodaj nowy pokoj:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="477.0" text="Typ:" />
+      <Label layoutX="228.0" layoutY="422.0" text="Numer:" />
+      <Label layoutX="486.0" layoutY="422.0" text="Piętro:" />
+      <Label layoutX="238.0" layoutY="477.0" text="Opis:" />
+      <TextField fx:id="room_fl" layoutX="527.0" layoutY="418.0" onAction="#AddNewRoom" prefHeight="25.0" prefWidth="48.0" />
+      <CheckBox fx:id="room_bl" layoutX="720.0" layoutY="422.0" mnemonicParsing="false" text="Balkon" />
+      <Button fx:id="room_add" layoutX="629.0" layoutY="525.0" mnemonicParsing="false" onAction="#AddNewRoom" prefHeight="27.0" prefWidth="148.0" text="Dodaj nowy" />
+      <Button fx:id="delete_room" layoutX="162.0" layoutY="362.0" mnemonicParsing="false" onAction="#DeleteRoom" prefHeight="25.0" prefWidth="87.0" text="Usuń" />
+      <Button fx:id="edit_room" layoutX="20.0" layoutY="362.0" mnemonicParsing="false" onAction="#editRoom" prefHeight="25.0" prefWidth="87.0" text="Edytuj" />
+      <Label layoutX="355.0" layoutY="422.0" text="Pojemność:" />
+      <TextField fx:id="room_poj" layoutX="424.0" layoutY="418.0" onAction="#AddNewRoom" prefHeight="25.0" prefWidth="39.0" />
+      <TextField fx:id="room_more" layoutX="277.0" layoutY="477.0" onAction="#AddNewRoom" prefHeight="48.0" prefWidth="298.0" />
+      <Separator layoutX="-5.0" layoutY="403.0" prefHeight="0.0" prefWidth="810.0" />
+      <Button fx:id="close_button" layoutX="20.0" layoutY="552.0" mnemonicParsing="false" onAction="#close_action" prefHeight="35.0" prefWidth="115.0" text="Wstecz" />
+      <Label layoutX="358.0" layoutY="7.0" text="Pokoje">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="room_confirm_update" layoutX="629.0" layoutY="481.0" mnemonicParsing="false" onAction="#editRoom" prefHeight="27.0" prefWidth="148.0" text="Zatwierdź" />
+      <Button fx:id="clearbtn" layoutX="277.0" layoutY="552.0" mnemonicParsing="false" onAction="#czysc_pola" text="Wyczyść pola" />
+      <Label layoutX="592.0" layoutY="422.0" text="Cena/dobę:" />
+      <TextField fx:id="cena_type" layoutX="661.0" layoutY="418.0" prefHeight="25.0" prefWidth="48.0" />
+   </children>
+</Pane>

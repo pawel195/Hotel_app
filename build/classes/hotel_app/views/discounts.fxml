@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hotel_app.controllers.DiscountsController">
+   <children>
+      <Label layoutX="139.0" layoutY="94.0" text="Rodzaj rabatu:" />
+      <Label layoutX="457.0" layoutY="224.0" text="Wartość:" />
+      <Label layoutX="327.0" layoutY="26.0" text="Zniżki dla gości">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="disc_combo" layoutX="142.0" layoutY="111.0" onAction="#showDiscountmore" prefHeight="25.0" prefWidth="165.0" />
+      <TextArea fx:id="disc_show_val" layoutX="457.0" layoutY="240.0" prefHeight="25.0" prefWidth="154.0" />
+      <Button fx:id="disc_del" layoutX="142.0" layoutY="194.0" mnemonicParsing="false" onAction="#disc_delete" text="Usuń wybrany" />
+      <Label layoutX="327.0" layoutY="311.0" text="Nowy rabat">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="disc_name" layoutX="142.0" layoutY="389.0" prefHeight="25.0" prefWidth="165.0" />
+      <Label layoutX="142.0" layoutY="372.0" text="Nazwa:" />
+      <Button fx:id="disc_new" layoutX="142.0" layoutY="472.0" mnemonicParsing="false" onAction="#addnewDiscount" prefHeight="25.0" prefWidth="91.0" text="Dodaj" />
+      <TextField fx:id="disc_value" alignment="TOP_LEFT" layoutX="457.0" layoutY="527.0" prefHeight="25.0" prefWidth="154.0" />
+      <Separator layoutX="1.0" layoutY="299.0" prefHeight="0.0" prefWidth="800.0" />
+      <Button fx:id="close_button" layoutX="24.0" layoutY="552.0" mnemonicParsing="false" onAction="#close_action" prefHeight="35.0" prefWidth="115.0" text="Wstecz" />
+      <Label layoutX="457.0" layoutY="510.0" text="Wartość:" />
+      <Label layoutX="622.0" layoutY="247.0" text="\%" />
+      <Label layoutX="620.0" layoutY="531.0" text="\%" />
+      <TextArea fx:id="disc_show_desc1" layoutX="335.0" layoutY="111.0" prefHeight="108.0" prefWidth="276.0" />
+      <Label layoutX="335.0" layoutY="94.0" text="Opis:" />
+      <Label layoutX="335.0" layoutY="372.0" text="Opis:" />
+      <TextArea fx:id="disc_show_desc" layoutX="335.0" layoutY="389.0" prefHeight="108.0" prefWidth="276.0" />
+      <Button fx:id="disc_edit" layoutX="142.0" layoutY="240.0" mnemonicParsing="false" onAction="#disc_modify" prefHeight="25.0" prefWidth="91.0" text="Zatwierdź" />
+   </children>
+</AnchorPane>
